@@ -1,0 +1,115 @@
+[project]
+name = "tiny-reasoning-language-model"
+version = "1.0.0"
+description = ""
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+  "accelerate==1.10.1",
+  "datasets==4.0.0",
+  "huggingface-hub[cli]==0.34.4",
+  "immutabledict>=4.2.1",
+  "langdetect>=1.0.9",
+  "lighteval==0.11.0",
+  "loguru==0.7.3",
+  "peft==0.17.1",
+  "python-dotenv==1.1.1",
+  "pyyaml==6.0.2",
+  "transformers==4.56.2",
+  "trl==0.23.0",
+  "wandb==0.22.0",
+]
+
+[project.optional-dependencies]
+cpu = ["torch>=2.7.0", "torchvision>=0.22.0"]
+rocm = ["torch>=2.7.0", "torchvision>=0.22.0", "pytorch-triton-rocm"]
+
+[tool.ruff]
+exclude = [
+  ".bzr",
+  ".direnv",
+  ".eggs",
+  ".git",
+  ".git-rewrite",
+  ".hg",
+  ".ipynb_checkpoints",
+  ".mypy_cache",
+  ".nox",
+  ".pants.d",
+  ".pyenv",
+  ".pytest_cache",
+  ".pytype",
+  ".ruff_cache",
+  ".svn",
+  ".tox",
+  ".venv",
+  ".vscode",
+  "__pypackages__",
+  "_build",
+  "buck-out",
+  "build",
+  "dist",
+  "node_modules",
+  "site-packages",
+  "venv",
+]
+line-length = 88
+indent-width = 4
+
+[tool.ruff.lint]
+select = ["I", "E", "F"]
+ignore = ["E501"]
+
+fixable = ["ALL"]
+unfixable = []
+
+dummy-variable-rgx = "^(_+|(_+[a-zA-Z0-9_]*[a-zA-Z0-9]+?))$"
+
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+skip-magic-trailing-comma = false
+line-ending = "auto"
+
+[tool.ty.rules]
+non-subscriptable = "warn"
+unused-ignore-comment = "warn"
+invalid-argument-type = "warn"
+invalid-parameter-default = "warn"
+unresolved-import = "ignore"
+invalid-assignment = "warn"
+
+[tool.uv]
+conflicts = [[{ extra = "cpu" }, { extra = "rocm" }]]
+
+[tool.uv.sources]
+
+torch = [
+  { index = "pytorch-cpu", extra = "cpu" },
+  { index = "pytorch-rocm", extra = "rocm" },
+]
+torchvision = [
+  { index = "pytorch-cpu", extra = "cpu" },
+  { index = "pytorch-rocm", extra = "rocm" },
+]
+
+# ROCm6 support relies on `pytorch-triton-rocm`, which should also be installed from the PyTorch index
+# (and included in `project.dependencies`).
+pytorch-triton-rocm = [{ index = "pytorch-rocm", extra = "rocm" }]
+
+[[tool.uv.index]]
+name = "pytorch-cpu"
+url = "https://download.pytorch.org/whl/cpu"
+explicit = true
+
+[[tool.uv.index]]
+name = "pytorch-rocm"
+url = "https://download.pytorch.org/whl/rocm6.3"
+explicit = true
+
+[dependency-groups]
+dev = ["pre-commit==4.3.0", "ruff==0.12.12", "ty==0.0.1a8", "ipykernel==6.29.5"]
