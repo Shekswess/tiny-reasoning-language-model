@@ -1,0 +1,48 @@
+model: Shekswess/trlm-stage-2-sft-final-2
+tokenizer: Shekswess/trlm-stage-2-sft-final-2
+dataset:
+  name: "Shekswess/trlm-dpo-stage-3-final-2"
+  split: "train"
+  num_proc: 16
+chat_template: |
+  {% for message in messages %}
+    {% if loop.first and messages[0]['role'] != 'system' %}
+        {{ '<|im_start|>system\nYou are a helpful AI assistant named Tiny Reasoning Language Model, trained by Shekswess. You are an assistant, with the ability to do reasoning. When performing reasoning always perform your full chain of thought inside <think>...</think> before giving a final answer. You are always reasoning so always use <think> </think> tags.<|im_end|>\n' }}
+    {% endif %}
+    {{ '<|im_start|>' + message['role'] + '\n' + message['content'] + '<|im_end|>\n' }}
+  {% endfor %}
+  {% if add_generation_prompt %}
+      {{ '<|im_start|>assistant\n' }}
+  {% endif %}
+trainer:
+  per_device_train_batch_size: 32
+  gradient_accumulation_steps: 4
+  gradient_checkpointing: true
+  num_train_epochs: 1
+  learning_rate: 0.00001
+  weight_decay: 0.01
+  warmup_ratio: 0.1
+  max_grad_norm: 0.2
+  beta: 0.1
+  loss_type: apo_zero
+  save_strategy: "steps"
+  save_steps: 180
+  logging_steps: 1
+  log_level: "info"
+  report_to: "wandb"
+  run_name: "trlm-stage-3-dpo-final-2"
+  output_dir: "outputs/stage_3_final"
+  push_to_hub: true
+  hub_model_id: "Shekswess/trlm-stage-3-dpo-final-2"
+  hub_strategy: "every_save"
+  max_prompt_length: 1048
+  max_length: 2048
+  lr_scheduler_type: cosine_with_min_lr
+  lr_scheduler_kwargs:
+    min_lr_rate: 0.1
+  dataloader_drop_last: true
+  dataloader_persistent_workers: true
+  dataloader_pin_memory: true
+  dataloader_num_workers: 12
+  remove_unused_columns: false
+  disable_tqdm: false
