@@ -32,7 +32,7 @@ The goal of this project is to demonstrate that even small models can learn to r
 | Stage 3 DPO | Align reasoning style with preference data | [`Shekswess/trlm-stage-3-dpo-final-2`](https://huggingface.co/Shekswess/trlm-stage-3-dpo-final-2) | complete (final weights + dataset) |
 
 
-## Pipeline
+## Post-Training Pipeline
 <img width="1014" height="563" alt="image" src="https://github.com/user-attachments/assets/195ef389-6aa9-4527-b4f0-bea68c0841ae" />
 
 ## Installation and Usage
