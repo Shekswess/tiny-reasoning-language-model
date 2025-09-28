@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://sdmntprnortheu.oaiusercontent.com/files/00000000-f580-61f4-9d8f-e2ad1ad30cb1/raw?se=2025-09-28T13%3A44%3A27Z&sp=r&sv=2024-08-04&sr=b&scid=d18de0ac-b41e-5d89-82aa-2a8c74df25d6&skoid=f28c0102-4d9d-4950-baf0-4a8e5f6cf9d4&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-09-27T15%3A59%3A48Z&ske=2025-09-28T15%3A59%3A48Z&sks=b&skv=2024-08-04&sig=CSrmTwUK5za43FjSFhOlkzGlLkqG2CDPpKYkYtSdV6g%3D" alt="trlm" width="800"/>
+  <img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/5f453496-8180-4cf4-94da-26ebbe1159d4" />
 </p>
 
 # Tiny Reasoning Language Model (trlm)
@@ -16,7 +16,12 @@ The goal of this project is to demonstrate that even small models can learn to r
 > [!IMPORTANT]  
 > The current model is not intended to be used in everyday applications. It is a research prototype and should be treated as such, mostly because of its limited capabilities, hallucination tendencies, etc.
 
-**[Hugging Face Collection with all the artefacts](https://huggingface.co/collections/Shekswess/tiny-reasoning-language-model-68d924929c17ad8300544ae4)**
+## [Hugging Face Collection](https://huggingface.co/collections/Shekswess/tiny-reasoning-language-model-68d924929c17ad8300544ae4)
+
+<a href="https://huggingface.co/collections/Shekswess/tiny-reasoning-language-model-68d924929c17ad8300544ae4">
+  <img width="912" height="786" alt="image" src="https://github.com/user-attachments/assets/35367115-27dd-4262-9f9a-ddc104f4dc31" />
+</a>
+
 
 ## Project Stages
 
@@ -28,8 +33,7 @@ The goal of this project is to demonstrate that even small models can learn to r
 
 
 ## Pipeline
-![Pipeline](./)
-
+<img width="1014" height="563" alt="image" src="https://github.com/user-attachments/assets/195ef389-6aa9-4527-b4f0-bea68c0841ae" />
 
 ## Installation and Usage
 
