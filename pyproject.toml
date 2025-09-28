@@ -1,7 +1,8 @@
 [project]
 name = "tiny-reasoning-language-model"
 version = "1.0.0"
-description = ""
+description = "Code repository dedicated to experimenting and research with tiny reasoning language model"
+authors = [{name = "Bojan Jakimovski - Shekswess", email = "jakimovski_bojan@outlook.com"}]
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
