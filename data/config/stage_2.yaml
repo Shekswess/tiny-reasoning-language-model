@@ -1,0 +1,39 @@
+name: Shekswess/trlm-sft-stage-2-final-2
+description: Dataset dedicated for stage 2 of the post-training dedicated to reasoning tasks (SFT, reasoning).
+datasets:
+  - name: HuggingFaceTB/smoltalk2
+    subset: Mid
+    split: Llama_Nemotron_Post_Training_Dataset_reasoning_r1
+    entries: 40200
+    drop_columns:
+      - chat_template_kwargs
+  - name: HuggingFaceTB/smoltalk2
+    subset: Mid
+    split: OpenThoughts3_1.2M
+    entries: 20000
+    drop_columns:
+      - chat_template_kwargs
+  - name: HuggingFaceTB/smoltalk2
+    subset: SFT
+    split: multi_turn_reasoning_if_think
+    entries: 10000
+    drop_columns:
+      - chat_template_kwargs
+  - name: HuggingFaceTB/smoltalk2
+    subset: SFT
+    split: aya_dataset_Qwen3_32B_think  
+    entries: 5000
+    drop_columns:
+      - chat_template_kwargs
+  - name: HuggingFaceTB/smoltalk2
+    subset: SFT
+    split: smoltalk_everyday_convs_reasoning_Qwen3_32B_think
+    entries: 2000
+    drop_columns:
+      - chat_template_kwargs
+  - name: HuggingFaceTB/smoltalk2
+    subset: SFT
+    split: s1k_1.1_think
+    entries: 800
+    drop_columns:
+      - chat_template_kwargs

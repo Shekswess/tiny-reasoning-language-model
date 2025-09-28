@@ -1,0 +1,12 @@
+name: Shekswess/trlm-dpo-stage-3-final
+description: Dataset dedicated for stage 3 of the post-training dedicated to preference alignment (DPO, preference alignment).
+datasets:
+  - name: scottgeng00/olmo-3-preference-mix-deltas_reasoning-yolo_scottmix-DECON-chfiltered
+    split: train
+    entries: 50000
+    drop_columns:
+      - prompt
+      - category
+      - prompt_id
+    rename_columns:
+      dataset: source

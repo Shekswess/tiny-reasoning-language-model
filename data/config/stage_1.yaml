@@ -1,0 +1,31 @@
+name: Shekswess/trlm-sft-stage-1-final
+description: Dataset dedicated for stage 1 of the post-training dedicated to every day conversations and general instruction following (SFT, non-reasoning).
+datasets:
+  - name: HuggingFaceTB/smoltalk2
+    subset: SFT
+    split: smoltalk_smollm3_smol_magpie_ultra_no_think
+    entries: 33500
+  - name: HuggingFaceTB/smoltalk2
+    subset: SFT
+    split: smoltalk_smollm3_smol_summarize_no_think
+    entries: 7500
+  - name: HuggingFaceTB/smoltalk2
+    subset: SFT
+    split: smoltalk_smollm3_smol_rewrite_no_think
+    entries: 7500
+  - name: HuggingFaceTB/smoltalk2
+    subset: SFT
+    split: smoltalk_smollm3_systemchats_30k_no_think
+    entries: 2500
+  - name: HuggingFaceTB/smoltalk2
+    subset: SFT
+    split: smoltalk_smollm3_explore_instruct_rewriting_no_think
+    entries: 2500
+  - name: HuggingFaceTB/smoltalk2
+    subset: SFT
+    split: tulu_3_sft_personas_instruction_following_no_think
+    entries: 2500
+  - name: HuggingFaceTB/smoltalk2
+    subset: SFT
+    split: smoltalk_smollm3_everyday_conversations_no_think
+    entries: 2000
