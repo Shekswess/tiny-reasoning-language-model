@@ -112,4 +112,4 @@ url = "https://download.pytorch.org/whl/rocm6.3"
 explicit = true
 
 [dependency-groups]
-dev = ["pre-commit==4.3.0", "ruff==0.12.12", "ty==0.0.1a8", "ipykernel==6.29.5"]
+dev = ["pre-commit==4.3.0", "ruff==0.13.2", "ty==0.0.1a8", "ipykernel==6.29.5"]
