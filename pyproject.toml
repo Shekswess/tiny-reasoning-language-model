@@ -7,7 +7,7 @@ readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
   "accelerate==1.10.1",
-  "datasets==4.0.0",
+  "datasets==4.2.0",
   "huggingface-hub[cli]==0.34.4",
   "immutabledict>=4.2.1",
   "langdetect>=1.0.9",
