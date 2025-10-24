@@ -18,7 +18,7 @@ The goal of this project is to demonstrate that even small models can learn to r
 
 
 ## Technical Report
-For an in-depth explanation of the motivation, training setup, datasets, and findings, see the full [Technical Report]([https://your-report-link-here](https://shekswess.github.io/tiny-reasoning-language-model.html)).
+For an in-depth explanation of the motivation, training setup, datasets, and findings, see the full [Technical Report](https://shekswess.github.io/tiny-reasoning-language-model.html).
 
 ## [Hugging Face Collection](https://huggingface.co/collections/Shekswess/tiny-reasoning-language-model-68d924929c17ad8300544ae4)
 
