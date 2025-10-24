@@ -16,12 +16,15 @@ The goal of this project is to demonstrate that even small models can learn to r
 > [!IMPORTANT]  
 > The current model is not intended to be used in everyday applications. It is a research prototype and should be treated as such, mostly because of its limited capabilities, hallucination tendencies, etc.
 
+
+## Technical Report
+For an in-depth explanation of the motivation, training setup, datasets, and findings, see the full [Technical Report]([https://your-report-link-here](https://shekswess.github.io/tiny-reasoning-language-model.html)).
+
 ## [Hugging Face Collection](https://huggingface.co/collections/Shekswess/tiny-reasoning-language-model-68d924929c17ad8300544ae4)
 
 <a href="https://huggingface.co/collections/Shekswess/tiny-reasoning-language-model-68d924929c17ad8300544ae4">
   <img width="912" height="786" alt="image" src="https://github.com/user-attachments/assets/35367115-27dd-4262-9f9a-ddc104f4dc31" />
 </a>
-
 
 ## Project Stages
 
